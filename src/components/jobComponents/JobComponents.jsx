@@ -3,6 +3,7 @@ import React from "react";
 import "./JobComponent.css";
 
 const Components = ({
+    //destructure the props of the job api
     job: {
         logo,
         company,
@@ -15,7 +16,17 @@ const Components = ({
         tools,
     },
 }) => {
-    const languagesTools = [...languages, ...tools];
+    const languagesTools = [];
+
+    //handles displaying either tools or languages
+    if (languages) {
+        languagesTools.push(...languages);
+    }
+
+    if (languages) {
+        languagesTools.push(...tools);
+    }
+
     return (
         <div className="jobs">
             <div className="job">
@@ -33,7 +44,13 @@ const Components = ({
                         </div>
                     </div>
                 </div>
-                <div className="Desc"></div>
+                <div className="Desc">
+                    {languagesTools
+                        ? languagesTools.map((languagesTool) => (
+                              <span>{languagesTool}</span>
+                          ))
+                        : ""}
+                </div>
             </div>
         </div>
     );
