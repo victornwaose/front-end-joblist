@@ -31,7 +31,7 @@
 }
 .jobCompany {
     color: var(--primary-dark-cyan);
-    font-size: 14px;
+    font-size: 0.8rem;
     display: inline;
     margin-right: 18px;
   }
@@ -42,7 +42,7 @@
   .jobPosition {
     cursor: pointer;
     padding: 15px 0 15px 0;
-    font-size: 1.2em;
+    font-size:15px;
     color: var(--dark-gray-cyan);
   }
   
@@ -56,6 +56,15 @@
     
   }
   
- .jobDesc{
+ .Desc{
     display: flex;
+    align-items: center;
+    
+ }
+ .descTools{
+    font-size: 15px;
+    color: var(--primary-dark-cyan);
+    background-color: var(--filter-tablets);
+    margin: 10px;
+    padding: 10px;
  }

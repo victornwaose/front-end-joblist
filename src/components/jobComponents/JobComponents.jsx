@@ -47,7 +47,7 @@ const Components = ({
                 <div className="Desc">
                     {languagesTools
                         ? languagesTools.map((languagesTool) => (
-                              <span>{languagesTool}</span>
+                              <span className="descTools">{languagesTool}</span>
                           ))
                         : ""}
                 </div>
