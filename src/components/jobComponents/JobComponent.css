@@ -1,0 +1,60 @@
+.jobs{
+ background-color: var(--bg-light-cyan);
+ font-size: 15px;
+ width: 100%;
+ font-family: "Spartan", sans-serif;
+}
+.job{
+    width: 90%;
+    margin:40px auto 0;
+    padding: 20px 0 30px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 15px 15px -4px hsla(180, 29%, 50%, 20%);
+    display: flex;
+}
+.jobContainer{
+    display: flex;
+}
+.logo{
+    padding-left:20px;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+.jobCards{
+    margin-left: 20px;
+}
+.jobDetails{
+    font-size: 15px;
+}
+.jobCompany {
+    color: var(--primary-dark-cyan);
+    font-size: 14px;
+    display: inline;
+    margin-right: 18px;
+  }
+  .jobTags{
+    display: flex;
+    flex-direction: column;
+  }
+  .jobPosition {
+    cursor: pointer;
+    padding: 15px 0 15px 0;
+    font-size: 1.2em;
+    color: var(--dark-gray-cyan);
+  }
+  
+  .jobPosition:hover {
+    color: var(--primary-dark-cyan);
+  }
+  .jobContract {
+    padding: 15px 0 15px 0;
+    font-size: .8em;
+    color: var(--dark-gray-cyan);
+    
+  }
+  
+ .jobDesc{
+    display: flex;
+ }
