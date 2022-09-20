@@ -39,6 +39,22 @@
     font-size: 0.8rem;
     margin-right: 18px;
   }
+.isNew{
+  background-color: var(--primary-dark-cyan);
+  color: #fff;
+  padding: 7px;
+  margin-left: 20px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+  .Featured{
+    background-color: var(--vdark-gray-cyan);
+    color: #fff;
+    padding: 7px;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-weight: 700;
+  }
   .jobTags{
     display: flex;
     flex-direction: column;

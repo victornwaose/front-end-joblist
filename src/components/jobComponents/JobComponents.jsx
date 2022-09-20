@@ -14,6 +14,8 @@ const Components = ({
         id,
         languages,
         tools,
+        featured,
+        isNew,
     },
 }) => {
     const languagesTools = [];
@@ -34,7 +36,13 @@ const Components = ({
                     <img src={logo} alt="logo" className="logo" />
                     <div className="jobCards">
                         <div className="jobDetails">
-                            <h1 className="jobCompany">{company}</h1>{" "}
+                            <h1 className="jobCompany">
+                                {company}
+                                {isNew && <span className="isNew">New</span>}
+                                {featured && (
+                                    <span className="Featured">Featured</span>
+                                )}
+                            </h1>{" "}
                         </div>
                         <div className="jobTags">
                             <h2 className="jobPosition">{position}</h2>
