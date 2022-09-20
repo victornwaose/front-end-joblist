@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import data from "./data.json";
 import "./App.css";
-import JobComponents from "./components/jobComponents/JobComponents";
+import { JobComponents, Header } from "./components";
 
 function App() {
     const [jobs, setJobs] = useState([]);
@@ -13,6 +13,7 @@ function App() {
 
     return (
         <div className="App">
+            <Header />
             <h1>
                 {jobs?.map((job) => (
                     <JobComponents job={job} />
