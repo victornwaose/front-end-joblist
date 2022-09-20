@@ -42,7 +42,7 @@
 .isNew{
   background-color: var(--primary-dark-cyan);
   color: #fff;
-  padding: 7px;
+  padding: 8px;
   margin-left: 20px;
   border-radius: 10px;
   font-weight: 700;
@@ -50,11 +50,21 @@
   .Featured{
     background-color: var(--vdark-gray-cyan);
     color: #fff;
-    padding: 7px;
+    padding: 8px;
     margin-left: 20px;
     border-radius: 10px;
     font-weight: 700;
   }
+  .feature-highlight {
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--primary-dark-cyan);
+    left: 0;
+    top: 0;
+    border-radius: 5px 0 0 5px;
+  }
+
   .jobTags{
     display: flex;
     flex-direction: column;

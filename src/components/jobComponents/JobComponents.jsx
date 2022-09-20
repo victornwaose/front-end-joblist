@@ -16,9 +16,11 @@ const Components = ({
         tools,
         featured,
         isNew,
+        role,
+        level,
     },
 }) => {
-    const languagesTools = [];
+    const languagesTools = [role, level];
 
     //handles displaying either tools or languages
     if (languages) {
@@ -43,6 +45,9 @@ const Components = ({
                                     <span className="Featured">Featured</span>
                                 )}
                             </h1>{" "}
+                            {featured && (
+                                <div className="feature-highlight"></div>
+                            )}
                         </div>
                         <div className="jobTags">
                             <h2 className="jobPosition">{position}</h2>

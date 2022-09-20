@@ -1,4 +1,5 @@
 .header{
     background-color: var(--primary-dark-cyan);
-    margin-bottom: 32px;
+    margin-bottom: 40px;
+    overflow: hidden;
 }
