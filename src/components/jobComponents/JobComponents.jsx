@@ -33,7 +33,7 @@ const Components = ({
 
     return (
         <div className="jobs">
-            <div className="job">
+            <div className={`{job} {tags}`}>
                 <div className="jobContainer">
                     <img src={logo} alt="logo" className="logo" />
                     <div className="jobCards">
