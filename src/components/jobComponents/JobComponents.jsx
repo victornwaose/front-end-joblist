@@ -33,8 +33,9 @@ const Components = ({
 
     return (
         <div className="jobs">
-            <div className={`{job} {tags}`}>
+            <div className="job">
                 <div className="jobContainer">
+                    {featured && <div className="feature-highlight"></div>}
                     <img src={logo} alt="logo" className="logo" />
                     <div className="jobCards">
                         <div className="jobDetails">
@@ -45,9 +46,6 @@ const Components = ({
                                     <span className="Featured">Featured</span>
                                 )}
                             </h1>{" "}
-                            {featured && (
-                                <div className="feature-highlight"></div>
-                            )}
                         </div>
                         <div className="jobTags">
                             <h2 className="jobPosition">{position}</h2>
