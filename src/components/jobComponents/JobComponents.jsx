@@ -20,15 +20,15 @@ const Components = ({
         level,
     },
 }) => {
-    const languagesTools = [role, level];
+    const tags = [role, level];
 
     //handles displaying either tools or languages
     if (languages) {
-        languagesTools.push(...languages);
+        tags.push(...languages);
     }
 
     if (languages) {
-        languagesTools.push(...tools);
+        tags.push(...tools);
     }
 
     return (
@@ -57,9 +57,9 @@ const Components = ({
                 </div>
                 <span className="lines"></span>
                 <div className="Desc">
-                    {languagesTools
-                        ? languagesTools.map((languagesTool) => (
-                              <span className="descTools">{languagesTool}</span>
+                    {tags
+                        ? tags.map((tag) => (
+                              <span className="descTools">{tag}</span>
                           ))
                         : ""}
                 </div>
