@@ -19,18 +19,17 @@ const Components = ({
         role,
         level,
     },
+    handleTagClick,
 }) => {
     const tags = [role, level];
 
-    //handles displaying either tools or languages
-    if (languages) {
-        tags.push(...languages);
-    }
-
-    if (languages) {
+    if (tools) {
         tags.push(...tools);
     }
 
+    if (languages) {
+        tags.push(...languages);
+    }
     return (
         <div className="jobs">
             <div className="job">
@@ -59,7 +58,12 @@ const Components = ({
                 <div className="Desc">
                     {tags
                         ? tags.map((tag) => (
-                              <span className="descTools">{tag}</span>
+                              <span
+                                  className="descTools"
+                                  onClick={() => handleTagClick(tag)}
+                              >
+                                  {tag}
+                              </span>
                           ))
                         : ""}
                 </div>
