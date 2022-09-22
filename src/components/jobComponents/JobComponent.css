@@ -6,7 +6,7 @@
 }
 .job{
     width: 90%;
-    margin:40px auto 0;
+    margin:40px auto 20px;
     padding: 7px 0 7px 0;
     border-radius: 10px;
     background-color: #fff;
@@ -21,6 +21,7 @@
     height: auto;
 }
 .logo{
+  position: relative;
     padding-left:20px;
     border-radius: 50%;
     width: 40%;
@@ -74,6 +75,7 @@
     font-size: 20px;
     color: #000;
     font-weight: 700;
+    padding-bottom: 10px;
   }
   
   .jobPosition:hover {
@@ -87,10 +89,13 @@
     color: var(--dark-gray-cyan);
     
   }
-  
+  .lines{
+    display: none;
+  }
  .Desc{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     
  }
  .descTools{
@@ -100,7 +105,42 @@
     margin: 10px;
     padding: 10px;
  }
- @media screen and (max-width: 390px) {
- }.jobs{
- width: 100%;
+ @media screen and (max-width: 690px) {
+  .job{
+    display: flex;
+    flex-direction: column;
+  }
+  .lines{
+    display: flex;
+    background-color: gray;
+    border-radius: 40px 40px 40px 40px;
+    width:90%;
+    margin: 2px auto;
+    height: 1px;
+  }
+  .Desc{
+    flex-wrap: wrap;
+ }
+ .jobContainer{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
+.jobPosition {
+  font-size: 15px;
+}
+.logo{
+  position: absolute;
+  bottom: 110px;
+  width: 30%;
+}
+.jobCards{
+  width:90%;
+   margin-top: 40px;
+}
+.feature-highlight {
+  width: 6px;
+  background-color: var(--primary-dark-cyan);
+  border-radius: 40px 0 0 40px;
+}
+ }

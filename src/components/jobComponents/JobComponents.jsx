@@ -55,6 +55,7 @@ const Components = ({
                         </div>
                     </div>
                 </div>
+                <span className="lines"></span>
                 <div className="Desc">
                     {languagesTools
                         ? languagesTools.map((languagesTool) => (
