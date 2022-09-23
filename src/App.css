@@ -1,3 +1,30 @@
 .App{
   background-color: var(--bg-light-cyan);
 }
+
+.filter{
+  display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto 0;
+  padding: 7px 0 7px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 15px 15px -4px hsla(180, 29%, 50%, 20%);
+}
+.filterDesc {
+  padding: 15px ;
+  margin-left: 15px;
+  font-size: 0.8rem;
+  color: var(--primary-dark-cyan);
+  background-color: var( --bg-light-cyan);
+  
+}
+.filterDelete {
+  padding: 15px ;
+  margin-left: 15px;
+  font-size: 0.8rem;
+  color: var(--filter-tablet);
+  background-color: var(--vdark-gray-cyan);
+}

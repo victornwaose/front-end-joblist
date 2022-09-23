@@ -34,12 +34,28 @@ function App() {
         setFilters([...filters, tag]);
     };
 
+    const handleFilterClick = (passedFilter) => {
+        setFilters(filters.filter((f) => f !== passedFilter));
+    };
+
     const filteredJobs = jobs.filter(filterFunc);
 
     return (
         <div className="App">
             <Header />
-            <h1>
+            <div className="filter">
+                {" "}
+                {filters?.map((filter) => (
+                    <span
+                        className="filterDesc"
+                        onClick={() => handleFilterClick(filter)}
+                    >
+                        {filter}
+                        <span className="filterDelete">x</span>
+                    </span>
+                ))}
+            </div>
+            <div>
                 {filteredJobs?.map((job) => (
                     <JobComponents
                         key={job.id}
@@ -47,7 +63,7 @@ function App() {
                         handleTagClick={handleTagClick}
                     />
                 ))}
-            </h1>
+            </div>
         </div>
     );
 }
