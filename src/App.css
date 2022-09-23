@@ -7,7 +7,7 @@
     align-items: center;
     flex-wrap: wrap;
   width: 90%;
-  margin: 0 auto 0;
+  margin: 0 auto 10px;
   padding: 7px 0 7px 0;
   border-radius: 10px;
   background-color: #fff;
@@ -16,6 +16,7 @@
 .filterDesc {
   padding: 15px ;
   margin-left: 15px;
+  margin-bottom: 10px;
   font-size: 0.8rem;
   color: var(--primary-dark-cyan);
   background-color: var( --bg-light-cyan);
@@ -27,4 +28,5 @@
   font-size: 0.8rem;
   color: var(--filter-tablet);
   background-color: var(--vdark-gray-cyan);
+  cursor: pointer;
 }

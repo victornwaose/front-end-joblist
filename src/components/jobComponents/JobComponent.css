@@ -99,6 +99,7 @@
     
  }
  .descTools{
+  cursor: pointer;
     font-size: 15px;
     color: var(--primary-dark-cyan);
     background-color: var(--filter-tablets);

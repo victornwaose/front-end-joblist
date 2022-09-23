@@ -37,6 +37,9 @@ function App() {
     const handleFilterClick = (passedFilter) => {
         setFilters(filters.filter((f) => f !== passedFilter));
     };
+    const handleClearClick = (passedFilter) => {
+        setFilters([]);
+    };
 
     const filteredJobs = jobs.filter(filterFunc);
 
@@ -45,15 +48,17 @@ function App() {
             <Header />
             <div className="filter">
                 {" "}
-                {filters?.map((filter) => (
-                    <span
-                        className="filterDesc"
-                        onClick={() => handleFilterClick(filter)}
-                    >
-                        {filter}
-                        <span className="filterDelete">x</span>
-                    </span>
-                ))}
+                {filters.length > 0 &&
+                    filters?.map((filter) => (
+                        <div
+                            className="filterDesc"
+                            onClick={() => handleFilterClick(filter)}
+                        >
+                            {filter}
+                            <span className="filterDelete">x</span>
+                        </div>
+                    ))}
+                <span onClick={() => handleClearClick()}>clear</span>
             </div>
             <div>
                 {filteredJobs?.map((job) => (
