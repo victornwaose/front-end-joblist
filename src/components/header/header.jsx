@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Header.css";
 
-const header = () => {
+const Header = () => {
     return (
         <div className="header">
             <img src="./images/bg-header-desktop.svg" alt="lo" />
@@ -10,4 +10,4 @@ const header = () => {
     );
 };
 
-export default header;
+export default Header;
