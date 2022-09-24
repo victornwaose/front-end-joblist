@@ -2,6 +2,10 @@
   background-color: var(--bg-light-cyan);
 }
 
+.filter-container{
+  
+}
+
 .filter{
   display: flex;
     align-items: center;
@@ -29,4 +33,11 @@
   color: var(--filter-tablet);
   background-color: var(--vdark-gray-cyan);
   cursor: pointer;
+}
+.clear{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  cursor: pointer;
+  margin-left: 30px
 }

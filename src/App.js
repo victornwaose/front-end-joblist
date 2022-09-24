@@ -6,12 +6,14 @@ import { JobComponents, Header } from "./components";
 
 function App() {
     const [jobs, setJobs] = useState([]);
+
     const [filters, setFilters] = useState([]);
 
     useEffect(() => {
         setJobs(data);
     }, []);
 
+    //  function for making a tg search
     const filterFunc = ({ tools, role, languages, level }) => {
         if (filters.length === 0) {
             return true;
@@ -26,7 +28,7 @@ function App() {
         if (languages) {
             tags.push(...languages);
         }
-
+        // filter search
         return tags.some((tag) => filters.includes(tag));
     };
 
@@ -34,9 +36,12 @@ function App() {
         setFilters([...filters, tag]);
     };
 
+    // function for deleting a serach
     const handleFilterClick = (passedFilter) => {
         setFilters(filters.filter((f) => f !== passedFilter));
     };
+
+    // function for clearing search
     const handleClearClick = (passedFilter) => {
         setFilters([]);
     };
@@ -46,20 +51,29 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <div className="filter">
-                {" "}
-                {filters.length > 0 &&
-                    filters?.map((filter) => (
-                        <div
-                            className="filterDesc"
-                            onClick={() => handleFilterClick(filter)}
+            <div className="filter-c">
+                {filters.length > 0 && (
+                    <div className="filter">
+                        <div></div>
+                        {filters?.map((filter) => (
+                            <div
+                                className="filterDesc"
+                                onClick={() => handleFilterClick(filter)}
+                            >
+                                {filter}
+                                <span className="filterDelete">x</span>
+                            </div>
+                        ))}{" "}
+                        <span
+                            className="clear"
+                            onClick={() => handleClearClick()}
                         >
-                            {filter}
-                            <span className="filterDelete">x</span>
-                        </div>
-                    ))}
-                <span onClick={() => handleClearClick()}>clear</span>
+                            clear
+                        </span>
+                    </div>
+                )}
             </div>
+
             <div>
                 {filteredJobs?.map((job) => (
                     <JobComponents
