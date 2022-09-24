@@ -35,7 +35,8 @@ const Components = ({
             <div className="job">
                 <div className="jobContainer">
                     {featured && <div className="feature-highlight"></div>}
-                    <img src={logo} alt="logo" className="logo" />
+                    <div className="imgContainer"> <img src={logo} alt="logo" className="logo" /></div>
+                   
                     <div className="jobCards">
                         <div className="jobDetails">
                             <h1 className="jobCompany">

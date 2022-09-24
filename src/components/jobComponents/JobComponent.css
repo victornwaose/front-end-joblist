@@ -20,11 +20,16 @@
     width: 50%;
     height: auto;
 }
-.logo{
+.imgContainer{
+  width: 50%;
+  height: auto;
+  border-radius: 50%;
+}
+ .logo{
   position: relative;
     padding-left:20px;
-    border-radius: 50%;
-    width: 40%;
+    
+    width: 100%;
     height: auto;
 }
 .jobCards{
@@ -133,6 +138,7 @@
   position: absolute;
   bottom: 110px;
   width: 30%;
+  left: 0;
 }
 .jobCards{
   width:90%;
