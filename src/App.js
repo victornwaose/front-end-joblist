@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import data from "./data.json";
 import "./App.css";
-import JobComponents, { Header } from "./components";
+import JobComponents from "./components/jobComponents/JobComponents";
+import Header from "./components/header/Header";
 
 function App() {
     const [jobs, setJobs] = useState([]);
